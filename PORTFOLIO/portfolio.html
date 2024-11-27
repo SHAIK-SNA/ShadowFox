@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <nav>
+                <img src="Portfolio-images/RG LOGO.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact me</a></li>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()" ></i>
+            </nav>
+            <div class="header-text">
+                <div class="home"><h1>Hi,Iam <span>Rohan Gowda</span></h1>
+                <h1>WEB DEVELOPER</h1></div>
+                <p>Front-end developer</p>
+            </div>
+        </div>
+        <hr>
+    
+      <!--About-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Portfolio-images/image of about.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1>About Me</h1>
+                        <p> Iam a Passionate 3rd-year Computer Science engineering student with a 
+                            growing expertise in front-end development. Recently began a focused journey in web development,
+                            gaining hands-on experience with HTML, CSS, and JavaScript. Driven to create responsive, 
+                            user-friendly interfaces, and continuously expanding skills in modern front-end frameworks and libraries. 
+                            Looking forward to contributing to projects that combine technical knowledge with creative design,
+                            while advancing in the field of front-end development
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>HTML </li>
+                                <br>
+                                <li>CSS </li>
+                                <br>
+                                <li>JAVA-SCRIPT </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                               <li>ShadowFox-Intern<br><span> 1Nov-30Nov 2024</li></span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2024-current</span><br>B.E at Brindavan college of Engineering</li>
+                                <br>
+                                <li><span>2022</span><br>PU from SDM Residential College</li>
+                                <br>
+                                <li><span>2019</span><br>SSLC from Sri Ramakunjeshwara English Medium</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+       </div>
+<!----project---->
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div>
+                    <h2>Amazon clone home page</h2>
+                    <p>This was the great experience in doing this project 
+                        it makes me to learn more and get helps me in get knowledge
+                        about various tags it makes me to grow much ahead in web development journey
+                    </p>
+                    <a href="#">learn more...</a>
+                </div>  
+                <div>
+                    <h2>Netflix clone home page</h2>
+                    <p>This was also one of the great experience in doing this project 
+                        it makes me to learn more and get helps me in get knowledge
+                        about various tags it makes me to grow much ahead in web development journey
+                    </p>
+                    <a href="#">learn more...</a>
+                </div>  
+                <div>
+                    <h2>Other various practice projects</h2>
+                    <p>These are the projects i done while practing my HTML CSS this are the blocks of my web developer journey</p>
+                    <a href="#">learn more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------contact------->
+
+    <div id="contact">
+        <div class="containerr">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>@rohangowdaka@gmail.com</p>
+                <p><i class="fa-solid fa-mobile"></i>6361001775</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <a href="#" class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright © Rohan Gowda. All rights reserved.</p>
+    </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwe9o75gn3-ysnqpbFJY9EeS6cORqcAqrad4qNFj7TtVzRt-5QoP0s1TWZJlIbETOpW/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },500)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</html>
