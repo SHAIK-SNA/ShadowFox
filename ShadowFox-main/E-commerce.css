@@ -192,6 +192,12 @@ nav ul li a:hover{
     z-index:5px;
 }
 
+/*------------Sidebar---------*/
+
+.sidebar-contentbox{
+    cursor: pointer;
+}
+
 /*---------------products-----------*/
 
 .products h1{
